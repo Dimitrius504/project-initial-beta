@@ -157,6 +157,10 @@ nav {
   box-shadow: 0 0 5px #b2cdebff;
 }
 
+.cta-select h1 {
+  font-size: 2rem;
+}
+
 .hamburger-menu {
   display: none;
   margin-left: auto;
@@ -187,9 +191,9 @@ span {
   top: 5%;
 }
 
-
-
-
+#wind-speed {
+  display: none;
+}
 
 /* Forecast Page */
 
@@ -201,9 +205,48 @@ span {
   width: 80vw;
 }
 
+@media (max-width: 1270px) {
+  .intro-text {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    text-align: center;
+    margin-top: 15vh;
+    margin-right: 1px;
+    padding-right: 0;
+  }
 
+  .intro-text h1 {
+    font-size: 2em;
+    font-weight: 500;
+    text-align: center;
+  }
 
-@media (max-width: 1270px){
+  .intro-text p {
+    text-align: right;
+    margin-top: 5px;
+    font-size: 2em;
+    color: white;
+    text-align: center;
+  }
+
+  .introduction > div > h1 > img {
+    width: 40%;
+  }
+
+  .cover > h1 {
+    font-size: 1.7rem;
+  }
+
+  .cta-select h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 1050px) {
+
   .intro-text {
     display: flex;
     flex-wrap: wrap;
@@ -213,36 +256,62 @@ span {
     text-align: center;
     margin-top: 15vh;
   }
-  
+
   .intro-text h1 {
-    font-size: 2em;
+    font-size: 1.7em;
     font-weight: 500;
     text-align: center;
   }
-  
+
   .intro-text p {
     text-align: right;
     margin-top: 5px;
-    font-size: 2em;
+    font-size: 1.5em;
     color: white;
     text-align: center;
   }
-  
+
+  .cta-select h1 {
+    font-size: 1.5rem;
+  }
+
+  #wind-speed {
+    display: none;
+  }
+
 }
 
-
-@media (min-width: 350px) and (max-width: 1024px) {
+@media (min-width: 350px) and (max-width: 800px) {
   body {
-    background-image: url("/assets/images/live.jpg");
+    background-image: none;
+  }
+
+  .presentation {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    flex-direction: column;
   }
 
   .cover {
-    margin-right: auto;
-    top: 57vh;
+    border-radius: 0;
+    width: 100vw;
+    top: 10vh;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
     flex: 1;
   }
+
   .cover img {
-    display: none;
+    border-radius: 0;
+    width: 150vw;
+    height: 40vh;
+
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 50% 50%;
   }
   .cover-text {
     flex-wrap: nowrap;
@@ -258,7 +327,84 @@ span {
     position: fixed;
   }
 
-  .nav-link{
+  .cta {
+    
+    justify-content: space-around;
+    padding: 38vh 2vw 0 2vw;
+    position: fixed;
+    margin: 0 0 0 0;
+    left: 0;
+  }
+
+  .cta-select h1 {
+    font-size: 3rem;
+    color: #47d49a;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding-left: 10%;
+    border-left: 10px solid #47d49a;
+    text-align: left;
+    justify-content: left;
+    align-items: center;
+    height: 80%;
+    margin: auto;
+    margin-left: 3%;
+  }
+  
+  .cta-select {
+    border: 1px solid rgba(0, 0, 0, 0.489);
+    background: transparent;
+    color: rgba(0, 0, 0, 0.399);
+    width: 95vw;
+    height: 20vh;
+    cursor: pointer;
+    text-align: left;
+    align-items: center;
+    font-size: 1.5em;
+  
+    -moz-box-shadow: 0px 0px 4px 1px grey;
+    -webkit-box-shadow: 0px 0px 4px 1px grey;
+    box-shadow: 0px 0px 4px 1px grey;
+  }
+  
+  .wind-speed-section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  #wind-speed {
+    display: block;
+    padding: 61vh 2vw 0 2vw;
+    text-align: left;
+  }
+
+  #wind-speed-select {
+    display: inline;
+    align-items: center;
+    margin: 0;
+    padding: 0 5% 5% 5%;
+  }
+
+  #wind-speed-select h1 {
+    padding: 0;
+    margin: 0 auto;
+     font-size: 3rem;
+    color: #000000;
+    border-left: none;
+    height: 50%;
+  }
+
+  #wind-speed-select > h2 {
+    color: #000000;
+    font-size: 1rem;
+  }
+
+  
+  .nav-link {
     display: none;
   }
 
@@ -272,6 +418,11 @@ span {
   }
 
   .introduction {
-    display: none;
+    margin: 0;
+  
+  }
+
+  .cover > h1 {
+    font-size: 1.5rem;
   }
 }
