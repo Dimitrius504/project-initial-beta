@@ -247,6 +247,9 @@ span {
 
 @media (max-width: 1050px) {
 
+  body {
+  }
+
   .intro-text {
     display: flex;
     flex-wrap: wrap;
